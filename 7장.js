@@ -92,3 +92,68 @@ for(var i=1; i>=0; i--){
 //while문
 
 var count =0 ;
+
+while (count <3){
+    console.log(count);
+    count++;
+}
+
+var count =0;
+while (true){
+    console.log(count);
+    count++;
+    if (count==5) break;
+}
+
+//01234  *5는 출력안됨
+
+//do...while
+
+var count=0;
+do{
+    console.log(count);
+    count++;
+} while (count<3);
+//012
+
+
+//문자열에서 특정문자의 인덱스를 검색하는예
+
+var string = 'Hello World.';
+var index ;
+
+for(var i =0; i< string.length; i++){
+    if ( string.substring(i,i+2)=='Wo'){
+        index = i;
+        break;
+    }
+}
+console.log(index);
+
+string='HelloWorld'
+console.log(string.substring(0,3))
+//string.substring (시작인덱스,끝문자인덱스)
+//string.substr(시작인덱스, 길이)
+
+
+var string = 'Hello World.';
+var count = 0;
+
+for (var i=0; i<string.length;i++){
+    if(string[i]!='l')continue; //H가 아니면 위로 올라간다.
+    count++; //continue 실행되면 이문은 실행x
+}
+console.log(count);
+
+//같은 식1  (by match mathod)
+console.log(string.match(/l/g).length);
+
+//같은 식2  (by for문)
+string='Hello World';
+var count=0;
+for (var i =0; i<string.length;i++){
+    if(string[i]=='l')count++;
+}
+console.log(count);
+
+
