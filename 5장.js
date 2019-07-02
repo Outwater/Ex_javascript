@@ -42,11 +42,11 @@ console.log(greeting);
 
 5*10>10
 
-function squre(number){
+function square(number){
     return number*number;
 }
 
-consonle.log(square(2))
+console.log(square(2))
 
 var person = {
     name: 'Lee',
@@ -60,8 +60,14 @@ var person = {
   console.log(person); // { name: 'Lee', gender: 'male', sayHello: [Function: sayHello] }
   
   person.sayHello(); // Hi! My name is Lee
-  person.name();
+  console.log(person.name);
 
   var arr=[1,2,3,4,5];
-console.log(arr[5]);
+console.log(arr[0]);
 
+
+var str = 'string';
+// 문자열은 유사배열이다.
+for (var i = 0; i < str.length; i++) {
+  console.log(str[i]);
+}
