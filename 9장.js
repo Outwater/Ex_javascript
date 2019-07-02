@@ -12,7 +12,6 @@ console.log(typeof str,str); //string,10
 console.log(x)               // 10
 //자동으로 str이 문자열속성으로 coercion 됐다.
 
-
 //1.문자열타입으로의 coercion
 0+''
 ~~+ ''
