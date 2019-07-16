@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <style>
+      .red  { color: #ff0000; }
+      .blue { color: #0000ff; }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Cities</h1>
+      <ul>
+        <li id="one" class="red">Seoul</li>
+        <li id="two" class="red">London</li>
+        <li id="three" class="red">Newyork</li>
+        <li id="four">Tokyo</li>
+      </ul>
+    </div>
+    <script>
+        const one = document.getElementById('one');
+        console.dir(one);
+    
+        console.log(one.nodeName);
+        console.log(one.nodeType);
+    
+        const textNode = one.firstChild;
+    
+        console.log(textNode.nodeName);
+        console.log(textNode.nodeType);
+    
+        console.log(textNode.nodeValue);
+    
+        textNode.nodeValue = 'Pusan;'
+    </script>
+    
+    
+    
+  </body>
+</html>
