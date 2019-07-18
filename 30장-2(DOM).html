@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+  <input type="text">
+  <script>
+  const input = document.querySelector('input[type=text]');
+  console.log(input);
+
+  // value 어트리뷰트가 존재하지 않으면
+  if (!input.hasAttribute('value')) {
+    // value 어트리뷰트를 추가하고 값으로 'hello!'를 설정
+    input.setAttribute('value', 'hello!');
+  }
+
+  // value 어트리뷰트 값을 취득
+  console.log(input.getAttribute('value')); // hello!
+
+  // value 어트리뷰트를 제거
+  input.removeAttribute('value');
+
+  // value 어트리뷰트의 존재를 확인
+  console.log(input.hasAttribute('value')); // false
+  </script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<body>
+    <input class ="password" type="password" value="123">
+    <button class= "show">show</button>
+<script>
+const $password= document.querySelector('.password');
+const $show = document.querySelector('.show');
+
+function makeClickHandler(){
+    let isshow= false;
+    return function (){
+        $password.setAttribute('type',isshow )
+    }
+}
+</script>
+</body>

@@ -7,7 +7,7 @@
       .blue { color: #0000ff; }
     </style>
   </head>
-  <body>
+<body>
     <div>
       <h1>Cities</h1>
       <ul>
@@ -17,24 +17,24 @@
         <li id="four">Tokyo</li>
       </ul>
     </div>
-    <script>
-        const one = document.getElementById('one');
-        console.dir(one);
+<script>
+      const elems = document.querySelectorAll('li');
+
+     [...elems].forEach(elem => {
+          if (elem.className == 'blue'){
+              elem.className = 'red';
+          }
+      });
+const heading = document.querySelector('h1') //h1 태그 요소 중 첫번째 요소 취득
+
+console.dir(heading);
+console.log(heading.firstChild.nodeValue); //Cities
+
+heading.id = 'heading'; // id가 없으면 지정하고 있으면 변경한다.
+console.log(heading.id)      
+</script>
     
-        console.log(one.nodeName);
-        console.log(one.nodeType);
-    
-        const textNode = one.firstChild;
-    
-        console.log(textNode.nodeName);
-        console.log(textNode.nodeType);
-    
-        console.log(textNode.nodeValue);
-    
-        textNode.nodeValue = 'Pusan;'
-    </script>
     
     
-    
-  </body>
+</body>
 </html>

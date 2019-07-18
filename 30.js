@@ -171,4 +171,49 @@ nodeValue를 이용하여 텍스트를 수정한다.
 </script>
 
 
+4.2 어트리뷰트 노드에의 접근/수정
+
+// #1. className  => class 어트리뷰트의 값을 취득 또는 변경한다.
+//                =>
+// #2. classList  => add, remove, item , toggle, contains, replace 메소드 제공 
+
+//#1 예제
+const elems = document.quertySelectorAll('li');
+
+[...elems].forEach(elem => {
+    if (elem.className == 'red'){
+        elem.className = 'blue';
+    }
+});
+
+//#2 예제
+[...elems].forEach(elem =>{
+    if(elem.classList.contains('blue')){
+        elem.classList.replace('blue','red');
+    }
+});
+
+
+
+// #3. id => id 어트리뷰트의 값을 취득 또는 변경한다.
+
+//#3 예제
+
+const heading = document.querySelector('h1') //h1 태그 요소 중 첫번째 요소 취득
+
+console.dir(heading);
+console.log(heading.firstChild.nodeValue); //Cities
+
+heading.id = 'heading'; // id가 없으면 지정하고 있으면 변경한다.
+console.log(heading.id)
+
+
+// #4. hasAttribute(attribute) => 지정한 어트리뷰트 가지고 있는지 검사
+//                             => Return: Boolean
+// #5. getAttribute(attribute) => 어트리뷰트값 취득 
+//                             => Return : 문자열
+// #6. setAttribute(attribute, value) => 어트리뷰트와 어트리뷰트 값 설정
+//                             => Return: undefined
+// #7. remove(attribute)       => 지정한 어트리뷰트 제거 
+//                             => Return : undefined
 
