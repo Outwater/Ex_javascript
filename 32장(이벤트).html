@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <label>User Name<input type = 'text'></label>
+    <em class="message"></em>
+    <script>
+        const input = document.querySelector('input[type=text]');
+        const msg = document.querySelector('.message');
+
+        const Min_UserName_Length = 2; //이름의 최소 길이를 변수로 선언
+
+        function checkUserNameLength(n){
+            if(input.value.length< n ){
+                msg.innerHTML= '이름은' + n + '자 이상이어야 합니다';
+            } else {
+                msg.innerHTML = ' ';
+            }
+            }
+        
+        input.addEventListener('blur', function(){
+            checkUserNameLength(Min_UserName_Length)});
+        </script>
+</body>
+</html>

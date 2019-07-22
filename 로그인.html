@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+ <img src= "img source/img_logo_offlin.png" width=" 75">&nbsp;&emsp;&emsp;&emsp;로그인 <h2>&emsp;&emsp;로그인</h2>
+ <label>이메일<br><input type = 'text'></label><br>
+ <em class="message"></em><br>
+ <label>비밀번호<br><input type = 'text'></label>
+ <em class="message"></em> <br><br>
+ 
+ 
+ <input type="button" value="&emsp;&emsp;&emsp;&emsp;로그인&nbsp;&nbsp;&nbsp;&emsp;&emsp;&emsp;&emsp;" onclick="alert('로그인 되었습니다!')"><br>
+ <input type="button" value="&emsp;&emsp;&emsp;&emsp;회원가입&emsp;&emsp;&emsp;&emsp;" onclick="alert('회원가입 오류!')">
+ 
+ <script>
+     const input = document.querySelector('input[type=text]');
+     const msg = document.querySelector('.message');
+
+     const Min_UserName_Length = 5; //이름의 최소 길이를 변수로 선언
+
+     function checkUserNameLength(n){
+         if(input.value.length< n ){
+             msg.innerHTML= '이메일은' + n + '자 이상이어야 합니다';
+         } else {
+             msg.innerHTML = ' ';
+         }
+         }
+     
+     input.addEventListener('blur', function(){
+         checkUserNameLength(Min_UserName_Length)});
+     </script>
+
+</body>
+</html>
