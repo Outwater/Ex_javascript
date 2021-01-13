@@ -17,6 +17,8 @@ console.log(str); // String test
 
 //슬라이싱 가능
 str = str.substring(0, 3);
+
+//test
 console.log(str); // Str
 
 abc = str.toUpperCase();
